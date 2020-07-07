@@ -1,0 +1,694 @@
+$yellow: #f9c978;
+.entrance_loading_container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  .entrance_loading_wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    background-image: url("./image/loading_bg_00000.jpg");
+    //background-color: red;
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    .camera_wrapper {
+      display: inline-block;
+      width: 100%;
+      height: 6rem;
+      text-align: center;
+      position: relative;
+      vertical-align: middle;
+      .camera {
+        display: inline-block;
+        width: 10rem;
+        height: 100%;
+        position: relative;
+        .icon {
+          margin: 0 auto;
+          width: 3rem;
+          height: 3rem;
+          position: relative;
+          overflow: hidden;
+          img {
+            display: inline-block;
+            width: 10rem;
+            position: absolute;
+            left: -123%;
+            bottom: -2.5rem;
+          }
+        }
+
+        .percentage {
+          width: 100%;
+          position: absolute;
+          bottom: 2rem;
+          left: 0;
+          font-size: 0.7rem;
+          color: #90281f;
+        }
+      }
+    }
+
+    .playBtn {
+      width: 5.625rem;
+      position: absolute;
+      left: 50%;
+      bottom: 21.5%;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.entrance_animation_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  //background-color: red;
+  z-index: -2;
+}
+
+.entrance_main_container {
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+  .title {
+    overflow: auto;
+    z-index: 366;
+    position: relative;
+    img {
+      display: block;
+      margin: 3rem auto 0;
+      width: 1.5rem;
+    }
+  }
+  .common_bg_item {
+    position: absolute;
+    bottom: 0;
+  }
+  .common_musicbutton_wrapper {
+    z-index: 399;
+  }
+  .entrance_button_wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 4.75rem;
+    z-index: 366;
+    .entrance_beginbutton {
+      display: block;
+      //margin: 27.7rem auto 0;
+      margin: 21.4rem auto 0;
+      width: 6.5rem;
+      height: 2.2rem;
+      background-image: url("./image/entrance/begin_button_00000.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 1;
+      transition: all 0.6s;
+      z-index: -10;
+    }
+    .active {
+      opacity: 0;
+      transition: all 0.6s;
+    }
+  }
+
+  .common_logo_wrapper {
+    margin: 1rem 0 0 0;
+    position: absolute;
+    bottom: 1.5rem;
+  }
+}
+
+.edit_container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  .common_bg_item {
+  }
+  .common_rope_wrapper {
+    top: -5.5rem;
+  }
+
+  .edit_wrapper {
+    margin: 0 auto 0;
+    width: 14.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    position: relative;
+
+    .main {
+      position: relative;
+      .edit_title_wrapper {
+        margin: 2rem 0 0 0;
+        padding: 1.5rem 0 0 0;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        .title {
+          display: inline-block;
+          margin: 0 2.5rem 0 1rem;
+          width: 6rem;
+          vertical-align: middle;
+        }
+        .selected {
+          display: inline-block;
+          width: 1.75rem;
+          vertical-align: middle;
+        }
+        .count {
+          display: inline-block;
+          width: 2rem;
+          vertical-align: middle;
+        }
+      }
+      .edit_flaglist_wrapper,
+      .edit_selectedflaglist_wrapper {
+        margin: 0 auto;
+        width: 90%;
+        ul {
+          font-size: 0;
+          li {
+            margin: 0.5rem 0;
+            text-align: left;
+            position: relative;
+            font-size: 0;
+            border-bottom: 1px solid $yellow;
+            a {
+              display: flex;
+              min-height: 2rem;
+
+              border: 1px solid transparent;
+
+              label {
+                display: table-cell;
+                padding: 0.2rem 0 0.2rem 0.2rem;
+                font-size: 1rem;
+                vertical-align: top;
+              }
+              .content {
+                display: table-cell;
+                padding: 0.35rem 0.1rem 0.25rem 0.3rem;
+                width: 10.6rem;
+                height: 1.7rem;
+                line-height: 0.9rem;
+                font-size: 0.65rem;
+                vertical-align: middle;
+              }
+              .flag {
+                display: none;
+                float: right;
+                width: 2.4rem;
+                height: 2rem;
+                background-color: $yellow;
+                background-image: url("./image/edit/flag_00000.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 40%;
+              }
+            }
+            &.chosen {
+              a {
+                border: 1px solid $yellow;
+                .flag {
+                  display: table-cell;
+                  padding: 0.1rem 0 0.2rem 0;
+                }
+              }
+            }
+          }
+        }
+        .change {
+          width: 100%;
+          height: 2rem;
+          text-align: center;
+          position: relative;
+          .edit_chnagebutton {
+            width: 2rem;
+            height: 1rem;
+            background-image: url("./image/edit/flag_00000.png");
+          }
+        }
+      }
+    }
+    .common_footer_wrapper {
+      margin: 3.5rem 0 1rem 0;
+    }
+  }
+}
+
+.edit_selectedflaglist_container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  .edit_selectedflaglist_wrapper {
+    margin: 2rem auto;
+    background: #fff;
+    width: 14.5rem;
+    //height: 14rem;
+    .main {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      ul {
+        margin: 2rem auto 0;
+        width: 90%;
+        //height: 10rem;
+        li {
+          margin: 1rem 0;
+          width: 100%;
+          height: 2.2rem;
+          line-height: 1.5rem;
+          font-size: 0.6rem;
+          text-align: left;
+          border: 1px solid $yellow;
+          a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+            border-bottom: 4px solid $yellow;
+            //justify-content:center;
+            align-items: center;
+            label {
+              display: inline-block;
+              margin: 0 0 0 0.55rem;
+              vertical-align: middle;
+              line-height: 0.7rem;
+              font-size: 0.7rem;
+            }
+            .content {
+              display: inline-block;
+              width: 10.3rem;
+              //height: 1.5rem;
+              line-height: 0.9rem;
+              font-size: 0.6rem;
+              vertical-align: middle;
+            }
+            .delete {
+              display: inline-block;
+              width: 1.5rem;
+              height: 2.2rem;
+              vertical-align: middle;
+              background-color: $yellow;
+              background-image: url("./image/edit/cross_00000.png");
+              background-size: contain;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.myflag_container {
+  .myflag_wrapper {
+    margin: 0 auto 0;
+    width: 14.5rem;
+    height: 27rem;
+    font-size: 0;
+    .main {
+      padding: 2rem 0 0 0;
+      position: relative;
+      .common_rope_wrapper {
+        top: -3.5rem;
+      }
+      .myflag_title_wrapper {
+        width: 100%;
+        height: 5.5rem;
+        background-color: #fff;
+        position: relative;
+        img {
+          margin: 2rem 0 0 0;
+          width: 50%;
+        }
+      }
+      .chain {
+        width: 100%;
+        img {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      .myflag_flaglist_wrapper {
+        background-color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        ul {
+          margin: 0 auto;
+          width: 90%;
+          font-size: 0;
+          li {
+            margin: 0 0 0.5rem 0;
+            text-align: left;
+            position: relative;
+            font-size: 0;
+            border-bottom: 1px solid $yellow;
+            a {
+              display: flex;
+              min-height: 2rem;
+              border: 1px solid transparent;
+              label {
+                display: inline-block;
+                padding: 0.48rem 0 0.5rem 0.5rem;
+                font-size: 0.7rem;
+                vertical-align: top;
+              }
+              .content {
+                display: inline-block;
+                flex: 1;
+                -webkit-flex: 1;
+                padding: 0.5rem 0 0.3rem 0;
+                width: 9.5rem;
+                line-height: 0.9rem;
+                font-size: 0.65rem;
+                vertical-align: middle;
+              }
+              .flag {
+                display: none;
+                flex: 1;
+                -webkit-flex: 1;
+
+                float: right;
+                width: 1.6rem;
+                height: 2rem;
+                background-color: $yellow;
+                background-image: url("./image/edit/flag_00000.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 55%;
+              }
+            }
+            &.chosen {
+              a {
+                border: 1px solid $yellow;
+                .flag {
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+        .footer {
+          width: 100%;
+          height: 2rem;
+          font-size: 1rem;
+          .signature {
+            p {
+              padding: 0 1rem;
+              text-align: right;
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+    .myflag_note_wrapper {
+      position: relative;
+      bottom: 1rem;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        .note {
+          display: inline-block;
+          width: 4.5rem;
+          .preview {
+            display: block;
+            background-color: #fff;
+            padding: 0.8rem 0.3rem 0.3rem 0.3rem;
+            width: 100%;
+            box-sizing: border-box;
+            img {
+              display: inline-block;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .common_node_wrapper {
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+.poster_myflag_container {
+  width: 100%;
+  height: 100%;
+  min-height: 18rem;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  .poster_myflag_wrapper {
+    margin: 0 auto 0;
+    padding: 0 0 3rem 0;
+    width: 14.5rem;
+    font-size: 0;
+    position: relative;
+    .background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      div {
+        margin: 0 auto;
+        width: 13.5rem;
+        height: 100%;
+        background-color: #fff;
+      }
+    }
+    .main {
+      position: relative;
+      .common_rope_wrapper {
+        top: -2rem;
+      }
+      .myflag_title_wrapper {
+        margin: 2rem 0 0 0;
+        width: 100%;
+        height: 5.5rem;
+        background-color: #fff;
+        position: relative;
+        img {
+          margin: 2rem 0 0 0;
+          width: 50%;
+        }
+      }
+      .chain {
+        width: 100%;
+        img {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+      .myflag_flaglist_wrapper {
+        background-color: #fff;
+        margin: 0 auto;
+        width: 100%;
+        ul {
+          margin: 0 auto;
+          width: 90%;
+          font-size: 0;
+          li {
+            margin: 0 0 0.5rem 0;
+            //margin: 0.5rem 0;
+            text-align: left;
+            position: relative;
+            font-size: 0;
+            border-bottom: 1px solid $yellow;
+            a {
+              display: flex;
+              min-height: 2rem;
+              border: 1px solid transparent;
+              label {
+                display: inline-block;
+                padding: 0.48rem 0 0.5rem 0.5rem;
+                font-size: 0.7rem;
+                vertical-align: top;
+              }
+              .content {
+                display: inline-block;
+                padding: 0.4rem 0 0.3rem 0;
+                width: 11.5rem;
+                line-height: 0.9rem;
+                font-size: 0.65rem;
+                vertical-align: middle;
+              }
+              .flag {
+                display: none;
+                flex: 1;
+                -webkit-flex: 1;
+                float: right;
+                width: 1.6rem;
+                height: 2rem;
+                background-color: $yellow;
+                background-image: url("./image/edit/flag_00000.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 55%;
+              }
+            }
+            &.chosen {
+              a {
+                border: 1px solid $yellow;
+                .flag {
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+        .footer {
+          width: 100%;
+          height: 2rem;
+          font-size: 1rem;
+          .signature {
+            p {
+              padding: 0 1rem;
+              text-align: right;
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+    .myflag_note_wrapper {
+      position: relative;
+      bottom: 0.5rem;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          display: inline-block;
+          margin: 0 0.4rem;
+          width: 4rem;
+          .preview {
+            display: block;
+            background-color: #fff;
+            padding: 0.8rem 0.3rem 0.3rem 0.3rem;
+            width: 100%;
+            box-sizing: border-box;
+            img {
+              display: inline-block;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .common_node_wrapper {
+        //position: absolute;
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+.poster_generated_wrapper {
+  width: 100%;
+  img {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.entrance_speech_wrapper {
+  position: absolute;
+  top: 0;
+  .speech {
+    margin: 3rem 0 0 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0.8rem 0 0 0;
+      width: 100%;
+      opacity: 0;
+      transition: all 0.3s;
+      img {
+        display: block;
+        width: 100%;
+      }
+      &.active {
+        opacity: 1;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.poster_footer_wrapper {
+  padding: 0.5rem 0;
+  width: 100%;
+  height: 3.5rem;
+  background-color: #fff;
+  font-size: 0;
+  .qrcode {
+    display: inline-block;
+    vertical-align: bottom;
+
+    width: 3rem;
+    img,
+    canvas {
+      display: block;
+      width: 100%;
+    }
+  }
+  .hint {
+    display: inline-block;
+    margin: 0 3rem 0 0.5rem;
+    vertical-align: bottom;
+    font-size: 0.5rem;
+    text-align: left;
+
+    .flag {
+      font-size: 0;
+      label {
+        display: inline-block;
+        width: 2px;
+        height: 2.4rem;
+        background-color: #ccc;
+        vertical-align: top;
+      }
+      span {
+        display: inline-block;
+        margin: 0.2rem 0 0 0;
+        width: 3rem;
+        height: 1rem;
+        line-height: 1rem;
+        background-color: red;
+        vertical-align: top;
+        font-size: 0.5rem;
+        color: #fff;
+        text-align: center;
+      }
+    }
+    p {
+      display: block;
+      font-size: 0.6rem;
+    }
+  }
+  .logo {
+    display: inline-block;
+    vertical-align: bottom;
+
+    width: 3rem;
+    img {
+      width: 100%;
+    }
+  }
+}
