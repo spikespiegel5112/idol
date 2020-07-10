@@ -3,10 +3,10 @@
 import Vue from 'vue'
 import FastClick from 'fastclick'
 // import VueRouter from 'vue-router'
-// import Vuex from 'vuex'
-import wxsdk from './js/wxsdk'
+// import wxsdk from './js/wxsdk'
 
 // import moment from 'moment';
+import '@/sass/index.scss';
 
 import App from './App'
 import router from './router/router'
@@ -35,7 +35,7 @@ Vue.prototype.$prodEnv = process.env.NODE_ENV === 'production';
 Vue.prototype.$webStorage.type = 'sessionStorage';
 util.$webStorage.type = 'sessionStorage';
 
-Vue.prototype.$wxsdk = wxsdk;
+// Vue.prototype.$wxsdk = wxsdk;
 
 
 /* eslint-disable no-new */

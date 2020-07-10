@@ -8,40 +8,46 @@ import Layout from '../components/Layout'
 let testPrefix = process.env.NODE_ENV === 'production' ? '/' : '/test';
 const routes = [{
   path: '/',
-  redirect: '/entrance',
+  redirect: '/hitTheList',
+  component: Layout,
+  children: [{
+    path: 'hitTheList',
+    name: 'hitTheList',
+    component: () => import('../components/HitTheList.vue')
+  }, {
+    path: 'personalCenter',
+    name: 'personalCenter',
+    component: () => import('../components/PersonalCenter.vue')
+  }, {
+    path: 'dream',
+    name: 'dream',
+    component: () => import('../components/Dream.vue')
+  }, {
+    path: 'editUserInfo',
+    name: 'editUserInfo',
+    component: () => import('../components/EditUserInfo.vue')
+  }]
+
+  
+  
 }, {
   path: '/loading',
-  component: Layout,
-  children: [{
-    path: '/',
-    name: 'loading',
-    component: () => import('../components/Loading.vue')
-  }]
-}, {
-  path: '/entrance',
-  name: 'entrance',
-  component: Layout,
-  children: [{
-    path: '/',
-    component: () => import('../components/Entrance.vue')
-  }]
+  name: 'loading',
+  component: () => import('../components/Loading.vue')
 }, {
   path: '/auth',
-
-  component: Layout,
-  children: [{
-    path: '/',
-    name: 'auth',
-
-    component: () => import('../components/Auth.vue')
-  }]
+  name: 'auth',
+  component: () => import('../components/Auth.vue')
 }];
 
 
 const router = new VueRouter({
-  routes,
-  base: './',
-  mode: 'history'
+  mode: 'history',
+  base: '',
+  scrollBehavior: () => ({
+    y: 0
+  }),
+  routes
 });
 
 

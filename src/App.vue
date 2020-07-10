@@ -44,9 +44,6 @@
 
 
 <style lang="scss">
-  @import 'sass/reset.scss';
-  @import 'sass/common.scss';
-  @import 'sass/main.scss';
 
   /*body {*/
   /*background-color: #fbf9fe;*/

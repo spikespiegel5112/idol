@@ -4,6 +4,8 @@ body {
   width: 100%;
   height: 100%;
   -webkit-tap-highlight-color: transparent;
+  background-color: #f1f1f1;
+
 }
 
 * {
@@ -70,22 +72,6 @@ input:-webkit-autofill {
 
 /*去除input默认样式*/
 
-.bg_da1416 {
-  background-color: #da1416;
-}
-
-.bg_ff3c3c {
-  background-color: #ff3c3c;
-}
-
-.bg_ff783c {
-  background-color: #ff783c;
-}
-
-.bg_4fcb52 {
-  background-color: #4fcb52;
-}
-
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -114,192 +100,19 @@ input:-webkit-autofill {
   width: 100%;
   background-position: 0 0;
   background-size: contain;
-  background-color: #fff;
   position: relative;
-  text-align: center;
 
   &:before {
     content: "";
     display: block;
     // height: 1px;
   }
-
-  .common_musicbutton_wrapper {
-    margin: 0.5rem 0 0 0;
-    z-index: 400;
-  }
-}
-
-.common_editbg_item {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-
-  .head {
-    height: 0;
-    position: relative;
-    font-size: 0;
-    z-index: 1;
-
-    .common_rope_wrapper {
-      top: -5rem;
-    }
-  }
-
-  .body {
-    width: 100%;
-    height: 100%;
-    text-align: left;
-
-    .main {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-    }
-
-    .line {
-      display: inline-block;
-
-      //margin: 0 0 0 1rem;
-      width: 1px;
-      height: 100%;
-
-      background-color: #fff;
-      position: absolute;
-      top: 0;
-      right: -0.3rem;
-      z-index: 111;
-    }
-  }
-
-  .footer {
-    width: 100%;
-    height: 2rem;
-    text-align: left;
-    font-size: 0;
-
-    .main {
-      display: inline-block;
-      width: 12.5rem;
-      height: 100%;
-      background-color: #fff;
-    }
-
-    .triangle {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 1rem;
-      border-color: #fff transparent transparent #fff;
-    }
-  }
-}
-
-.common_rope_wrapper {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  //top: -1.5rem;
-  top: 0;
-  justify-content: space-between;
-  z-index: 1;
-
-  ul {
-    display: inline-block;
-    width: 4rem;
-    font-size: 0;
-
-    li {
-      display: inline-block;
-      width: 1rem;
-      text-align: center;
-
-      label {
-        display: block;
-        margin: 0 auto;
-        width: 2px;
-        height: 6rem;
-
-        background-color: #fff;
-      }
-
-      span {
-        display: block;
-        margin: 0 auto;
-        width: 0.5rem;
-        height: 0.5rem;
-        background-color: $yellow;
-        border-radius: 50%;
-      }
-    }
-  }
-}
-
-.common_node_wrapper {
-  width: 100%;
-
-  .rope_wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    li {
-      display: inline-block;
-      width: 1.5rem;
-      text-align: center;
-
-      span {
-        display: block;
-        margin: 0 auto;
-        width: 0.4rem;
-        height: 0.4rem;
-        background-color: $yellow;
-        border-radius: 50%;
-      }
-
-      label {
-        display: block;
-        margin: 0 auto;
-        width: 2px;
-        height: 2.3rem;
-        background-color: #fff;
-      }
-    }
-  }
-}
-
-.common_footer_wrapper {
-  margin: 2rem 0 0 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-
-  a {
-    display: inline-block;
-    //flex: 1;
-    width: 5.5rem;
-    height: 2.5rem;
-    line-height: 2rem;
-    font-size: 0.75rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  .empty {
-    background-image: url("./image/button_bg_empty_00000.png");
-  }
-
-  .solid {
-    background-image: url("./image/button_bg_solid_00000.png");
-  }
 }
 
 .common_loading_wrapper {
   width: 100%;
   height: 100%;
-  background-image: url("./image/bg_1_00000.jpg");
+  // background-image: url("./image/bg_1_00000.jpg");
   z-index: 999;
   position: absolute;
 
@@ -357,7 +170,7 @@ input:-webkit-autofill {
     margin: 0 auto;
     width: 5rem;
     height: 2rem;
-    background-image: url("./image/logo_00000.png");
+    // background-image: url("./image/logo_00000.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -368,7 +181,6 @@ input:-webkit-autofill {
   //width: 100%;
   height: 2rem;
   z-index: 1;
-  line-height: 2rem;
   color: #000;
   position: relative;
   background-color: #fff;
@@ -386,10 +198,14 @@ input:-webkit-autofill {
     .previous {
       display: inline-block;
       width: 2rem;
+      height: 100%;
       font-size: 1rem;
       color: #fff;
       text-align: center;
-
+      font-size: 0;
+      .van-button{
+        height: 100%;
+      }
       a {
         display: inline-block;
 
@@ -496,22 +312,12 @@ input:-webkit-autofill {
   color: #000;
   //background: red;
   //border-radius: 0.6rem;
-  background-image: url("./image/button_bg_empty_00000.png");
+  // background-image: url("./image/button_bg_empty_00000.png");
   background-size: contain;
   background-repeat: no-repeat;
 
   &.active {
     background: #f36619;
-  }
-}
-
-.common_form_item {
-  position: relative;
-
-  .common_button_item {
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 }
 
@@ -525,194 +331,55 @@ input:-webkit-autofill {
   z-index: 1;
 }
 
-.common_blocktitle_item {
-  display: flex;
-  margin: 0 auto;
-  //padding: 0 0.2rem;
-  width: 100%;
-  height: 1.3rem;
-  text-align: center;
-  justify-content: center;
-  box-sizing: border-box;
-  //background-color: #ffb54c;
-  border-radius: 0.3rem;
-  position: relative;
-
-  > div {
-    &:before {
-      content: "·";
-      display: inline-block;
-      vertical-align: middle;
-      line-height: 1.3rem;
-      //color: #fff;
-    }
-
-    width: 5.3rem;
-    height: 100%;
-    vertical-align: middle;
-    font-size: 0;
-    position: relative;
-    justify-content: center;
-
-    span {
-      width: 0.1rem;
-      height: 0.1rem;
-      border-radius: 50%;
-      border: 1px solid #ccc;
-      background-color: #ccc;
-      display: inline-block;
-      vertical-align: middle;
-      //color: #fff;
-      font-size: 1rem;
-    }
-
-    i {
-      display: inline-block;
-      width: 5rem;
-      height: 1px;
-      //line-height: 1.5rem;
-      background: #ccc;
-      vertical-align: middle;
-    }
-  }
-
-  p {
-    display: inline-flex;
-    margin: 0 0.5rem;
-    text-align: center;
-    color: #d50303;
-    line-height: 1.3rem;
-    font-size: 0.7rem;
-    vertical-align: middle;
-  }
-}
-
-.common_initializing_item {
-  width: 100%;
-  height: 42rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
-.common_404_wrapper {
-  color: #fff;
-  position: relative;
-
-  h1 {
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .main {
-    .withpicture {
-      text-align: center;
-
-      .prizeimage {
-        margin: 2rem 0;
-
-        img {
-          width: 4rem;
-        }
-      }
-    }
-  }
-}
-
-.common_sharehint_wrapper {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  img {
-    width: 100%;
-  }
-}
-
-.common_bg_item {
-  display: block;
-  width: 100%;
-  height: 34.6rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  transition: all 0.3s;
-}
-
-.common_musicbutton_wrapper {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  top: 0.5rem;
-  left: 0.5rem;
-  z-index: 400;
-
-  &.enable {
-    display: inline-block;
-  }
-
-  &.active {
-    a {
-      animation: rotate 3s infinite linear;
-    }
-  }
-
-  &.loading {
-    .loadinghint {
-      display: block;
-    }
-  }
-
-  .loadinghint {
-    display: none;
-
-    width: 3rem;
-    font-size: 0.5rem;
-    color: #666;
-  }
-
-  .test {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background-image: url("./image/music_00000.png");
-    background-size: 100%;
-    animation-play-state: paused;
-    position: relative;
-  }
-}
-
-.aplayer {
-  //display: block !important;
-  z-index: 99 !important;
-  position: absolute !important;
-  top: 0 !important;
-  background-color: transparent !important;
-  box-shadow: 0 0 1px transparent !important;
-  right: 0 !important;
-
-  .aplayer-button {
-    animation: rotate 3s infinite linear;
-  }
-
-  .aplayer-pic {
-    background: transparent;
-  }
-}
-
 .common_toast_wrapper {
   .van-toast__text {
     width: 6rem;
+  }
+}
+
+.common_tabbar_wrapper {
+  width: 100%;
+  height: 2.3rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  ul {
+    display: flex;
+    height: 100%;
+    li {
+      display: inline-block;
+      flex: 1;
+      height: 100%;
+ 
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        font-size: 0.6rem;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 100%;
+          vertical-align: middle;
+        }
+        div {
+          display: inline-block;
+          vertical-align: middle;
+
+          span {
+            display: block;
+            width: 100%;
+            height: 1rem;
+          }
+          label {
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
 
